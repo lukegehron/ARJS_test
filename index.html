@@ -6,11 +6,16 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
+         <a-assets>
+         <a-asset-item id="tree-obj" src="https://raw.githubusercontent.com/lukegehron/ARJS_test/master/Site2.obj"></a-asset-item>
+         <a-asset-item id="tree-mtl" src="https://raw.githubusercontent.com/lukegehron/ARJS_test/master/Site2.mtl"></a-asset-item>
+         </a-assets>
+
         <a-marker preset="hiro">
             <a-entity
             position="0 -1 0"
             scale="0.05 0.05 0.05"
-            obj-model="https://raw.githubusercontent.com/lukegehron/ARJS_test/master/Site2.obj"
+            obj-model="obj: #tree-obj; mtl: #tree-mtl"
             ></a-entity>
         </a-marker>
         <a-entity camera></a-entity>
